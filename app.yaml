@@ -1,0 +1,26 @@
+application: urkolarraapppiedra2
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /images
+  static_dir: static/imagenes
+
+- url: /styles
+  static_dir: static/estilos
+
+- url: /antzar\.jpeg
+  static_files: antzar.jpeg
+  upload: antzar\.jpeg
+
+- url: .*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+
+- name: jinja2
+  version: latest
